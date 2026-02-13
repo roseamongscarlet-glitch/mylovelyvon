@@ -52,9 +52,9 @@ function App() {
       const particle = document.createElement("div");
       particle.className = "particle";
       particle.style.left = `${Math.random() * window.innerWidth}px`;
-      particle.style.animationDuration = `${Math.random() * 3 + 2}s`;
+      particle.style.animationDuration = `${Math.random() * 4 + 3}s`;
       document.body.appendChild(particle);
-      setTimeout(() => particle.remove(), 5000);
+      setTimeout(() => particle.remove(), 7000);
     };
     const interval = setInterval(createParticle, 300);
     return () => clearInterval(interval);
@@ -127,7 +127,7 @@ function App() {
       </div>
 
       {/* Tabs */}
-      <div className="fixed bottom-0 left-0 right-0 flex justify-center items-center space-x-2 md:space-x-4 z-20 p-2 md:p-4 bg-red-700/20 backdrop-blur-sm safe-bottom">
+      <div className="fixed bottom-0 left-0 right-0 flex justify-center items-center space-x-2 md:space-x-4 z-20 p-2 md:p-4 bg-red-700/20 backdrop-blur-sm safe-bottom tabs-container">
         {tabs.map((tab, index) => (
           <button
             key={index}
